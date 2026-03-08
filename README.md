@@ -6,7 +6,7 @@
 
 ## What This Is
 
-Council — A Crucible is a structured dialogue framework that runs inside a single Claude context window. It uses persona framing to produce four distinct modes of engagement: rigorous interrogation, generative action, lived experience, and unformed intuition. The mechanism is register instruction — precise persona descriptions bias the model’s output direction rather than commanding it.
+Council — A Crucible is a structured dialogue framework that runs inside a single Claude or ChatGPT context window (not tested elsewhere yet). It uses persona framing to produce four distinct modes of engagement: rigorous interrogation, generative action, lived experience, and unformed intuition. The mechanism is register instruction — precise persona descriptions bias the model’s output direction rather than commanding it.
 
 The framework is a tool for thinking. It doesn’t replace judgment; it provides different cognitive and emotional registers on demand, matched to what the user is actually trying to do. It holds multiple perspectives simultaneously on the same input, and the friction between them produces something a single register wouldn’t reach. You think against it rather than into it, and the thinking gets sharper in the friction. (Your mileage may vary…)
 
@@ -49,7 +49,7 @@ The framework covers the spectrum of human cognitive and emotional engagement by
 
 ## Documents
 
-Three documents are required to run and understand the framework. Additional field documents — including a findings log, field findings log, and debrief protocol — support ongoing testing and development and are not required for use.
+Three documents are required to understand the framework. Only the RT is needed to run it. Additional field documents — including a findings log, field findings log, and debrief protocol — support ongoing testing and development and are not required for use.
 
 **COUNCIL-001-RT** — Runtime Directive. The operational document. Start here. Contains persona sets, commands, and everything needed to run a session.
 
