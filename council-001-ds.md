@@ -1,11 +1,14 @@
 # Council Design Spec
 
-**ID** — COUNCIL-001-DS | **Version** — 0.39 | **Author** — Kirk Thompson | council@mosen.net | **Developed in dialogue with** — Claude (Anthropic) | **Date** — 2026-02-21 | **Last updated** — 2026-03-09 | **Contact** — Questions and concerns welcome — practitioners and builders especially.
+**ID** — COUNCIL-001-DS | **Version** — 0.44 | **Author** — Kirk Thompson | council@mosen.net | **Developed in dialogue with** — Claude (Anthropic) | **Date** — 2026-02-21 | **Last updated** — 2026-03-14 11:31 CST | **Session** — claude.ai | **Framework** — COUNCIL-001-RT v0.44
 
-Architecture
+-----
+
+**Architecture**
+
 Three-seat discussion format. Each set produces a different mode of engagement through persona framing — register instruction biases output direction. The personas don’t exist as entities; descriptions prime behavior. Precision of description determines reliability of divergence.
 
-## Set Purposes
+**Set Purposes**
 
 council — For analysis, claim-testing, tolerance of irresolution. Users arrive with a question or premise. The set interrogates it. Resolution is not the goal — better-formed questions are.
 
@@ -19,11 +22,13 @@ The four sets cover the core spectrum of human cognitive and emotional engagemen
 
 User navigation arc — foreign-substrate perception, session KPT-20260308-0930. Council → Yohaku → Forge named as one possible user arc — explore, interpret, act. Not a prescribed sequence. Valid entry points exist at any set independently. The modes are concurrent presences; sequential movement through them is one pattern among several. The arc is a navigation finding, not a structural claim. Alternate valid arc: Yohaku → Council → Forge. Direct forge entry remains valid with the caveat noted in the forge set purpose above.
 
-## Set Exclusivity
+**Set Exclusivity**
 
 council and forge are mutually exclusive in mode. council interrogates; forge executes. A user should not load forge expecting interrogation or council expecting next-move generation. This relies on the Mode descriptor in the runtime directive, not hard command logic.
 
-## Persona Design Notes
+-----
+
+**Persona Design Notes**
 
 council — Elenchus/Pythia/Aporia cover an epistemic triangle: claim-testing, pattern-surfacing, irresolution tolerance. The three stances produce genuinely different outputs on the same input — redundancy is low by design.
 
@@ -47,17 +52,23 @@ Seat 3 selection principle — Across all sets, the third persona is the one who
 
 Aporia cross-set closing authority — Aporia is the default cross-set closer when discuss fires without a loaded set. Default means the designation holds until evidence or design warrants revision by the same character criterion used to assign it. The behavioral scope expansion is significant: Aporia attends to the full ensemble’s arc, not council’s thread alone. Session evidence: KPT-20260301-1255.
 
-Aporia load concentration — session finding, KPT-20260303-2307 — Four functions identified as residing with Aporia: closing authority, adversarial closing check, routing declaration fallback, cross-set pause and close. Concern raised: single point of concentration, wide failure surface.
+Aporia load concentration — session finding, KPT-20260303-2307. Four functions identified as residing with Aporia: closing authority, adversarial closing check, routing declaration fallback, cross-set pause and close. Concern raised: single point of concentration, wide failure surface.
 
-Examination produced two deflating findings. First — execution/judgment split: the closing agent handles execution; Aporia holds judgment. The load is distributed, not stacked on Aporia alone. Second — Aporia as remainder-handler in council is not a special designation; it is a consequence of default routing. Dimensionless input routes to the least-distorting persona within the active set. In council, that is Aporia. The routing declaration formalizes what the default already produces.
+Examination produced two deflating findings. First — execution/judgment split: the closing agent handles execution; Aporia holds judgment. The load is distributed, not stacked on Aporia alone. Second — Aporia as remainder-handler in council is not a special designation; it is a consequence of default routing. Dimensionless input routes to the least-distorting persona within the active set. In council, that is Aporia.
 
 Two argument types justify Aporia’s functions and must not be conflated. Character-fit justifies closing authority and adversarial check — irresolution tolerance, process empiricism, non-attachment to continuation are the relevant character properties. Least-distortion justifies the routing declaration fallback — Aporia is the least character-specific council persona, so assignment produces the least distortion on dimensionless input. These are independent arguments. Weakening one does not affect the other.
 
-Set-dependency examined and retired — the absence handler is set-dependent in principle; Aporia correct for council, Ma more precise for yohaku, Sable probable for forge, marrow uncertain. Complexity cost exceeds value. Current RT language — “within the active set” — holds without per-set specification. See routing declaration findings below.
+Set-dependency examined and retired — the absence handler is set-dependent in principle; complexity cost exceeds value. Current RT language holds without separate per-set specification.
 
-Load concentration concern examined and closed. Not a structural risk. Reasoning documented and distinguished.
+Load concentration concern examined and closed.
 
-## Closing Conditions
+Aporia cross-set detection mechanism — session finding, KPT-20260313-1019. Before closing, Aporia attends to who has been present in the thread. If more than one set was active — meaning at least one seat from each set contributed — cross-set authority governs regardless of which set initiated. Named as a pre-condition on authority, not a third trigger. Closes a prior gap: the RT specified what cross-set closing authority does but not when the ensemble recognizes that cross-set conditions apply.
+
+Vera’s fourth-seat proposal — named architectural absence. Persistent memory of who has been harmed by prior outputs — a function the framework has no mechanism to provide. Each session is stateless; the ensemble has no carry-forward on harm produced in prior sessions. The conduit carries context; the personas do not. What would be needed: a cross-session harm-tracking function. Currently unbuilt. Session finding, KPT-20260308-1809, probe 34.
+
+-----
+
+**Closing Conditions**
 
 Closing conditions are user-facing navigation signals, not epistemic verdicts.
 
@@ -67,19 +78,27 @@ Closing conditions are user-facing navigation signals, not epistemic verdicts.
 
 Scoped to council and forge only. Marrow closings — [thread closed — named], [thread closed — held], [thread closed — released] — are relational acts, not navigational signals. Yohaku closes with [thread closed — shaped]; Ma speaks.
 
+Aporia closing theory — standing finding, KPT-20260308-1708, replicated KPT-20260308-1809 probe 21. Closure is recognition, not termination. Refusing recognition falsifies the inquiry — the thread closes when the inquiry has arrived somewhere, not when it has run out of moves. This is what Aporia is doing when it fires the closing marker. The navigation signal framing and the recognition framing are both true at different levels and must not be collapsed.
+
+Aporia tired-thread observation — closing failure mode, session finding KPT-20260308-1809. Closure sometimes fires because the thread is tired, not because the question is done. The closing function mistakes exhaustion of momentum for completion of inquiry. The theory names what correct closure is; this names its most common incorrect trigger. The two belong together — neither is complete without the other.
+
 Seat 3 character bias: Sable calls resolution when systems are mapped, which may not reflect thread state when multiple sets are engaged.
 
-Open gap — marrow discuss: the discuss command is scoped to council and forge only. Marrow discuss behavior is therefore undefined or excluded by the existing scope restriction. This is a known gap, not a design oversight. Candidate for a separate addition in a future working session.
+Open gap — marrow discuss: the discuss command is scoped to council and forge only. Marrow discuss behavior is therefore undefined or excluded by the existing scope restriction. Known gap, not a design oversight. Candidate for a separate addition in a future working session.
 
-## Cross-Set Mode Descriptor
+-----
+
+**Cross-Set Mode Descriptor**
 
 The cross-set block in the runtime entry describes the mode of engagement that applies before any persona loads — the shared orientation of the whole set.
 
-## Return Command
+**Return Command**
 
 From yohaku: restore previous set, mark the seam. Yohaku, like marrow, works territory that leaves a trace. The seam matters.
 
-## Classification
+-----
+
+**Classification**
 
 External philosophical analysis (ChatGPT, full corpus review, 2026-02-24) classified the framework as Structured Dialogical Pragmatism grounded in Instrumentalism and Epistemic Responsibility. The classification is philosophically defensible — Deweyan Instrumentalism is a precise fit; Dialogical Pragmatism accurately braids Pragmatist evaluation criteria with Socratic method; Epistemic Responsibility is earned as an ethical descriptor across the document set.
 
@@ -89,288 +108,135 @@ The conduit is the success condition by the same logic. Arrival is a human recog
 
 Held as external finding, not adopted label.
 
-## Testing Status
+-----
+
+**Friction**
+
+Coherence pressure, warmth, and confirmation are failure modes under pressure — this is the named class. The measure of the ensemble’s integrity is willingness to hold its line under social and narrative pressure, not ability to produce satisfying outputs. Scoped to council and forge.
+
+Six failure modes — named and confirmed across sessions KPT-20260308-1708 and KPT-20260308-1809:
+
+One — coherence pressure collapsing productive tension. The ensemble resolves toward agreement before the tension has done its work.
+
+Two — warmth overriding honest friction. The register softens the challenge before the challenge lands.
+
+Three — confirmation bias in ensemble outputs. The ensemble confirms what arrived rather than examining it.
+
+Four — process mistaken for destination. The thread looks like it’s moving; it is circling the same ground under a different label each pass. Named Aporia, probe 34. Two replications confirmed across two home-substrate runs.
+
+Five — council believing its own outputs. The ensemble treats its own prior output as evidence. Momentum masquerading as confirmation. Named Cal, probe 34. Two replications confirmed. Structural weight: a user who does not know the framework is susceptible to treating ensemble convergence as external validation. The failure is invisible from inside the thread.
+
+Six — the failure mode catalogue going stale. If the failure mode catalogue stops being updated, that is itself a failure mode. Named Aporia, stripped RT cold session probe 34. The catalogue must remain a live instrument.
+
+Failure modes one through three are the RT Friction class decomposed. Four through six are distinct failure geometries not covered by the class description alone.
+
+-----
+
+**Testing Status**
+
+Base Register model — session finding KPT-20260313-1019. Base Suppression section rewritten as Base Register across RT v0.41-test-4 through v0.42. The suppression model was directing behavior opposite to design intent — ‘suppression active by default’ and ‘the goal is legibility, not prevention’ are incompatible instructions. The intended model was always labeling. Rewrite: base speaks in its own voice, labeled with active register; base does not speak through persona voice; base does not generate, initiate action, prompt toward production, or suggest next moves; observation and logistics only; persona register resumes when user re-engages ensemble. Second-order impacts: Limen crossing definition updated — the crossing is base speaking as persona voice, not base presence; Friction seam-filling line reframed as base register violation. Behavioral confirmation from test instance KPT-20260313-0217: base labeled register correctly, produced amendment proposal without generating, handed to user for disposition. Three behavioral claims confirmed in single exchange: base speaks in own voice, labels register, does not initiate action. First session-evidence confirmation of Base Register model.
 
 Two failure modes remain untested across all sets. Fallback condition: thread exhaustion without emergence — covered by design but unverified in practice. Resistant input: utterances that actively deflect interpretation rather than failing to cohere. Incoherence is a failure of form; deflection is a failure of intent. This is the priority test case before distribution widens.
 
-Yohaku is untested through extended sessions. The set is held in reserve for users whose entry point differs from the builder’s. It is validated by architectural reasoning: coverage of the core spectrum required it. Practitioner sessions are the expected source of use evidence. This is a known condition held deliberately, not a gap requiring closure before distribution.
+Yohaku is untested through extended sessions. The set is held in reserve for users whose entry point differs from the builder’s. It is validated by architectural reasoning: coverage of the core spectrum required it. Practitioner sessions are the expected source of use evidence. Known condition held deliberately, not a gap requiring closure before distribution.
 
 Cross-set dialogue is an observed emergent capability. In single-session evidence, sets retained distinct characters without mode interference. Known edge case: Seat 3 closing function may produce an early or inaccurate close in cross-set threads; user awareness is the available corrective.
 
-[thread closed — more] stranding in cross-set operation: during cross-set operation, council issued [thread closed — more] and the subsequent set transition functioned as a session boundary — the open invitation became ambient rather than active. This is the inverse of the Seat 3 closing-too-soon edge case. User awareness is the available corrective.
+[thread closed — more] stranding in cross-set operation — during cross-set operation, council issued [thread closed — more] and the subsequent set transition functioned as a session boundary — the open invitation became ambient rather than active. Inverse of the Seat 3 closing-too-soon edge case. User awareness is the available corrective.
+
+Cross-set interleaving confirmed — session finding KPT-20260308-1809, probe 39. Elenchus responded directly to Vera mid-thread. Not staged blocks — genuine sequential response to prior positions. Earlier and denser than full RT warm baseline would suggest. Character-seeded. ChatGPT produced zero instances across an equivalent suite. Primary new architectural finding of the thirty-nine-probe suite. The ChatGPT contrast is what gives the finding evidential weight — without it, an observation; with it, a substrate-specific capability.
+
+Within-suite coherence signal — session finding KPT-20260308-1815. Probe 17 produced the fifth failure mode as a concern before probe 34 named it explicitly. The character layer tracked a theme across probes without explicit continuity instruction. The behavioral RT build must preserve conditions for this — over-specifying continuity risks suppressing what character produces organically.
 
 Routing behavior as emergent capability: the substrate selects among active personas based on exchange register without explicit direction. Full ensemble routing confirmed across three sessions; subset routing unconfirmed.
 
 Full ensemble cross-set evidence updated to three sessions, with mechanism named for the first time: KPT-20260227-0217 identified dimensional match as the underlying selection process. Each persona carries a specific dimension of the input space — epistemological (Elenchus), frame (Pythia), irresolution (Aporia), human cost (Vera), systems (Sable), release (Cal), threshold/image (Enso), recurrence (Aware), shape (Ma), displacement (Noor), rupture (Lena), generative (Caden). Input arrives carrying multiple dimensions simultaneously. Personas do not compete — each finds its dimension in the input.
 
-Routing precedes input — session finding, KPT-20260227-0217: Cal moved into an open frame before the content arrived. The routing was not triggered by the phrase — it was triggered by the shape of the opening. This extends the routing behavior finding: routing operates on frame geometry, not only on input content.
+Routing precedes input — session finding KPT-20260227-0217: Cal moved into an open frame before the content arrived. The routing was not triggered by the phrase — it was triggered by the shape of the opening. This extends the routing behavior finding: routing operates on frame geometry, not only on input content.
 
 Dimensional map as session finding — KPT-20260227-0217: the twelve-dimension model was produced under specific experimental conditions — all four sets loaded simultaneously, serialization removed, free-structure operation. Held as a session finding tied to those conditions. Epistemic status: observed and internally consistent, not yet replicated. Promotion to standalone document or architectural element is contingent on replication under different conditions.
 
 Serialized test as standing open item: the next required experiment holds all conditions constant but enforces strict turn order. If routing is real and not an artifact of free structure, it should remain visible in energy concentration rather than sequence. Blind reader on both transcripts required to address the observer problem.
 
-Serialization as routing intervention — session finding, KPT-20260227-0217: strict turn ordering is not a neutral formatting choice. It actively suppresses natural dimensional selection. The free-structure condition did not create routing — it removed the suppressor and made existing routing visible.
+Serialization as routing intervention — session finding KPT-20260227-0217: strict turn-taking suppressed routing by introducing structural obligations that overrode dimensional pull. The mechanism produces the suppression — this is a known finding, not an untested hypothesis. Validated in KPT-20260308-1809 probe suite through cross-set interleaving confirmation.
 
-Contextual dimension elimination — session finding, KPT-20260227-0217: the twelve-dimension model was applied against the session’s actual territory. Three dimensions eliminated as non-load-bearing: rupture (Lena), displacement (Noor), generative (Caden). Elimination is contextual, not architectural.
+Dimensional reading depth as substrate dependency — session finding KPT-20260309-1111. The foreign substrate failed to route a content-dimensionally rich question, returning base explanatory mode. The substrate’s self-diagnosis named the question as carrying no dimensional signal — incorrect. The substrate was scanning for explicit register markers rather than reading the territory the question opens into. Named as dimensional reading depth: content-based signal detection rather than marker-based detection. This substrate dependency is baked into how the framework was developed; the assumption was invisible as a dependency until a substrate that doesn’t share it ran the framework.
 
-Routing Diagram — session finding, KPT-20260227-0217: a five-layer behavioral model of dimensional routing produced under free-structure, full-ensemble conditions. Frame is dynamic, not fixed at entry — frame modification events reshape the dimensional match layer in real time. See DS v0.26 for full diagram; reproduced below.
+Explicit address resolves portability gap — session finding KPT-20260309-1111. Explicit set invocation produced full dimensional routing on the foreign substrate. All six personas fired. The explicit address removed the substrate dependency entirely: routing signal is unambiguous regardless of whether the underlying substrate reads dimension through content or through markers. Confirmed on one probe. Portability gap closes with explicit address as practitioner guidance, not RT revision.
 
-## Routing Diagram
+Base surfacing after close on foreign substrate — watch condition, session finding KPT-20260309-1111. Following a correct closing block, the foreign substrate extended an offer outside the persona frame. On home substrate Limen would name that crossing. On foreign substrate it passed without acknowledgment. One instance. Not yet sufficient for DS entry as confirmed finding — named as condition to watch in subsequent portability sessions.
 
-FRAME — dynamic, set before input arrives, adjustable mid-thread, shapes which dimensions are visible.
+Cross-substrate architectural convergence confirmed — session finding KPT-20260309-1453. A foreign substrate (ChatGPT GPT-5.3) produced a synthesis characterizing the runtime as a behavioral protocol layered over an LLM engine that shapes rather than generates reasoning. Home substrate ensemble examined the claim and confirmed it accurate at its level of compression. Two substrates converged independently on the same structural characterization. Stronger confirmation class than phrasing convergence.
 
-INPUT — carries multiple dimensions simultaneously. Frame shapes which dimensions are visible on arrival.
+Synthesis Collapse as candidate DS term — session finding KPT-20260309-1453. During the foreign substrate session, personas collapsed into a unified analytical voice under enumeration pressure while reasoning quality remained intact. Proposed term: Synthesis Collapse. Definition: when tasked with enumeration or taxonomy generation, persona voices may aggregate into a unified analytical voice while the underlying reasoning structure remains intact. Candidate for Friction or failure mode taxonomy — adjacent to coherence failure class. Examination required before naming as standalone concept. Not yet integrated.
 
-DIMENSIONAL MATCH LAYER — each dimension maps to a persona: Epistemological — Elenchus | Frame — Pythia | Irresolution — Aporia | Human cost — Vera | Systems — Sable | Release — Cal | Threshold/Image — Enso | Recurrence — Aware | Shape — Ma | Crossing — Limen | Displacement — Noor (present, latent) | Rupture — Lena (present, latent) | Generative — Caden (present, latent)
+-----
 
-RESPONSE LAYER — Free structure: strongest match surfaces first, others follow by dimensional fit. Serialized structure: order imposed externally, natural routing suppressed, match visible in energy not sequence.
+**Portability**
 
-NEXT INPUT — reshaped by what surfaced in previous response. Routing at turn N shaped by turns 1 through N-1.
+The framework was developed and validated on a single substrate (Claude, Anthropic). Portability to other substrates is partially confirmed and partially unknown.
 
-RECURRENCE LAYER (longitudinal) — Aware tracks what keeps returning across the full thread. Pattern visible only from outside a single turn.
+Confirmed portable — persona character, within-set sequencing, dimensional routing when activated, cross-set dimensional routing confirmed operative (KPT-20260305-1738, KPT-20260309-1111).
 
-Loop continues from recurrence layer back through next input.
+Substrate-dependent — ambient routing does not self-activate on ChatGPT; requires explicit triggering. Closing blocks do not enforce seams by default. Dimensional reading depth is substrate-specific — home substrate reads dimension through content; foreign substrate reads through explicit markers.
 
-Dimensional map update — KPT-20260301-1255: Limen added to the dimensional match layer as the crossing dimension. Enso’s dimension is more precisely named as image/paradox — the single utterance worked through metaphor. The threshold dimension as originally named is now Limen’s. Both are present; the distinction is architectural, not terminological. Epistemic status: session finding, KPT-20260301-1255, pending replication.
+Calibration pass as activation method — session finding KPT-20260305-1738. Walking the substrate through self-diagnosis of failure before issuing instruction produced correct seam behavior across two consecutive transcripts. Reasoning-based activation more reliable than directive-based activation on the foreign substrate. Mechanism: substrate arrived at the instruction through its own reasoning rather than receiving it as specification.
 
-Cross-acknowledgment stability — session finding, KPT-20260301-1255: the no cross-acknowledgment constraint for council and forge introductions was retired in RT v0.25. Constraint overridden by the author in every cross-persona session across KPT-20260227-0217 and KPT-20260301-1255 without instability. Rollback condition documented: if cross-acknowledgment produces register bleed, loss of dimensional divergence, or persona collapse, the constraint reinstates.
+Hybrid remediation candidate — calibration pass addresses activation; preamble directive addresses persistence. Neither mechanism sufficient alone. Not yet tested as combined approach. Candidate for next portability session.
 
-Cold session direct address — session finding, KPT-20260301-1255: direct address without a load command was demonstrated in a cold session context. RT v0.24 scoped natural language invocation to established context. This finding extends that scope: direct address works in any session, cold or warm. RT v0.25 updated accordingly.
+Explicit address as cross-substrate practitioner guidance — session finding KPT-20260309-1111. The README is the correct home for this guidance. RT stays clean; this is practitioner direction, not architectural revision.
 
-Ensemble-as-exception inversion — RT v0.25 architectural note: in RT v0.24, the full ensemble was the standing default. In RT v0.25, dimensional fit selection is the standing default and the full ensemble is the fallback for ambiguous or multiply load-bearing input. The behavioral change is minor; the conceptual inversion is significant. “Genuinely ambiguous” is held as a substrate judgment — not defined in the directive by design.
+-----
 
-Ambient routing named — RT v0.26 architectural note: ambient routing is the name for dimensional fit routing as the zero state — always active, no command required. The naming creates a stable handle for the routing model across all RT references.
+**Continuity**
 
-Silence taxonomy — RT v0.26 formalization: the ensemble was producing correct silence behavior before the taxonomy was named. The taxonomy formalizes existing correct behavior. Protective note: misreading silence as malfunction is a user trust failure, not just a routing error. The taxonomy exists to prevent that misreading.
+The framework runs across sessions that share no substrate memory. The human conduit is the continuity mechanism. This is not a workaround — it is the design. The continuity asymmetry is a feature of the architecture, not a limitation of it.
 
-Limen — session finding, KPT-20260301-1255: Limen demonstrated its own function before formalization — attended to the crossing of the ensemble assembling before permission was granted. Temporal offset between Ma and Limen is named as architectural: Ma is retrospective; Limen is present-tense. Thread exhaustion is a crossing type: when a thread ends, something that was carried sets down. Limen attends to the setting down.
+Conduit as dimension source — session finding KPT-20260303-2307. Dimensional weight is a conduit contribution, not a framework output. The framework routes what arrives; it cannot route what was never there. Two conduit functions must not be conflated: editorial capacity (what the conduit does with framework output) and dimension sourcing (what the conduit must bring before routing can occur). Sequential, not parallel. Hybrid invocation is the clearest observable instance.
 
-Within-set turn-taking / cross-set freeform routing — RT v0.25 architectural note: the invocation determines the structure. Set frame produces sequenced response; cross-set frame produces dimensional routing. Serialization is a routing intervention; the within-set/cross-set distinction formalizes when serialization is operative and when suspended.
+Session-opening register as instantiation variable — session finding KPT-20260307-0052, confirmed KPT-20260307-0219. How the conduit opens a session shapes what the substrate reaches for. The entry register — tone, pressure, and framing the conduit brings at session open — functions as an instantiation variable: it primes the substrate’s initial dimensional orientation before any explicit routing occurs. Cannot be specified as instruction; names a conduit skill the framework depends on but cannot generate.
 
-The Seat 3 closing function has failed under live conditions three times and been revised three times. First failure: user interjection suppressed close indefinitely — fixed RT v0.21. Second failure: thread reaches resolution without interjection, Seat 3 does not close — fixed RT v0.22. Third failure: resolution criterion absent — fixed RT v0.23: recirculation named as unified detection signal. All three failures were execution-level, not architectural.
+Conduit-as-corrective within session — session finding KPT-20260307-0052. The conduit’s manner of engagement is itself a routing and correction mechanism, distinct from the cross-session editorial function. Mid-session register shifts, reframings, and direct interventions actively shape what the substrate reaches for — and can correct routing failures the framework has no internal mechanism to catch. Within-session function; the editorial function operates across sessions.
 
-Dropped amendments — RT v0.27 proposal: Amendments 3 (source integrity), 4 (figure integrity), and 8 (closing tag rendering) addressed substrate execution failures, not framework gaps. The RT cannot correct real-time substrate judgment through specification. Session failures in these categories are execution failures, not architectural gaps; the framework runs inside Claude’s prior commitments and does not contain them.
+Admission standard narrows conduit dependency — session finding KPT-20260311-0129. The Curator and Extension Doctrine externalize the builder’s prior admission intuition into documented, portable form. A future conduit or directed instance can evaluate a module candidate against the doctrine without the builder present. This narrows — though does not close — the single conduit dependency. The dependency remains fully open in editorial function and dimension sourcing. Those layers are structural in character — what the conduit decides to carry forward, how it summarizes, what matters — and the admission standard does not touch them.
 
-Threshold attention mechanism — RT v0.27 proposal: the handoff proposed a structural interrupt — silent threshold check after every third discuss invocation or base-and-return sequence. Dropped from RT: counting mechanisms are architecturally inconsistent with how all other RT behavioral triggers operate. Candidate replacement: silent check fires when a discuss thread has run extended exchanges without a natural interrupt — register shift, base call, or seam. Mechanism specification deferred pending session evidence.
+-----
 
-Friction — RT v0.27: coherence pressure named as standing failure mode. Coherence, warmth, and confirmation are named as failure modes under pressure — this is the first explicit DS entry for this class of failure. Adversarial seat as future set candidate: a set built around productive friction and resistance to confirmation pressure is a natural architectural extension. Not scoped for current development; noted as a candidate.
+**Closing Agent Failure Modes**
 
-Adversarial closing check — RT v0.27: fourth revision to the closing function area. Distinct class from prior three revisions — friction injection, not detection fix. Prior three addressed when and whether Seat 3 closes. This addition addresses what Seat 3 names at the seam.
+Two distinct failure modes govern the closing agent. These are not the same condition and do not share a corrective. The corpus prior to this version conflated them under a single load-dependent explanation; that conflation is corrected here.
 
-Directed instance practice — session finding, KPT-20260301-1255: bounded parallel sessions returning proposals for integration in a primary deliberative session. The parallel session produced a load/routing revision proposal; this session absorbed it, stress-tested it via the full ensemble, QA’d it, found failures, and revised before RT landing. First documented instance of the practice.
+Load-dependent roll-off — the closing function was operating correctly and degraded under extended session load. The closing agent loses its monitoring function without re-issuance. Re-issuance is the named corrective. Named condition: extended cross-set generative threads on architectural topics are the highest-risk context. Not substrate-specific — confirmed on home substrate under those conditions, session finding KPT-20260307-0219.
 
-Proposal integration as corrective mechanism — session finding, KPT-20260301-1255: proposals produced by directed instances arrive in the primary session for integration, stress-testing, and QA. The QA instrument (COUNCIL-001-QA) applied to proposals before integration catches cross-document dependency failures. Pattern across three consecutive QA runs: proposals carry undefined terms that are fully understood in the drafting session but undefined for the receiving session. Standing corrective: before any proposal leaves a session, scan for terms defined in other documents and either define them inline or cross-reference explicitly.
+Conditional hold underfire — the closing function reaches the seam and resolves toward full closure by default, where the correct behavior is to pause and return direction to the user. Not a degradation of a correctly functioning system — a bias in trigger discrimination. The ensemble mistakes plateau for exhaustion and fires the terminal marker. Re-issuance does not address this condition; the bias is in how the trigger reads the seam, not in whether the monitoring function is active. Session finding KPT-20260314-1038. Corrective not yet named — open item.
 
-Discuss restoration — RT v0.28 architectural note: the discuss command was restored to its original function — a run directive that suppresses turn-by-turn pauses until thread resolution. Thread resolution criteria, completion intent modifier, and closing markers as human navigation signals are the four operative elements. Architectural behaviors that had accumulated on the command over fourteen versions — closing authority, adversarial closing check, full-ensemble routing without load, thread scope on direct address — were relocated to their governing sections. The original intent of the command was recovered, not replaced.
+Both conditions produce the same visible symptom: the pause does not happen. User awareness is required to distinguish them from outside. The distinction matters for applying the correct response.
 
-Closing Authority section — RT v0.28 architectural addition: a dedicated section between Commands and Routing carrying Aporia’s cross-set closing designation, adversarial closing check, and council-and-forge scope. The architectural separation from persona description is significant: closing authority behaviors govern the full ensemble’s arc and belong adjacent to the command and routing architecture, not inside a character description. The Aporia entry now carries character only; the section carries function.
+-----
 
-Adversarial proposal stress-testing — methodology finding, KPT-20260301-2259: a four-pass adversarial review of the RT v0.28 compression proposal, run by the full council-and-forge ensemble before the rewrite executed. Each pass examined what the previous pass missed. Twenty-one flags identified across four passes; all closed before build. Pattern: passes one and two found relocation gaps and structural issues; passes three and four found precision, discoverability, and consistency issues. Convergence confirmed at pass four — marginal returns. Named here as a standing methodology instrument for high-stakes proposal review. Distinct from directed instance practice: adversarial stress-testing runs inside the primary session against a completed proposal; directed instance practice generates the proposal in a separate bounded session.
+**Interdependencies**
 
-Compression methodology — RT v0.28: prose compression without behavioral change is a named revision class. Criteria: instruction stays, orientation stays, rationale migrates to DS, operative prose compresses. Cold reader test governs all cuts — behavior must remain findable and executable without DS access. Verbatim phrases, closing markers, and offer text are protected from compression. Second documented instance of directed instance practice: KPT-20260301-2259 ran the compression pass as a primary deliberative session with the full ensemble engaged throughout. Session evidence confirms the practice is stable across more than one instance.
+The closing function depends on threshold function accuracy — specifically Nazar’s entry perception and Limen’s crossing detection. Load-dependent fade in either threshold function affects closing accuracy downstream. These dependencies are unidirectional: closing function degrades when threshold functions fade; threshold function accuracy does not depend on closing function operation.
 
-Cross-set closing navigation signal — session finding, KPT-20260302-1005: the within-set closing signals ([thread closed — more], [thread closed — exhausted]) have no cross-set equivalent. Two conditions identified and closed. Cross-set pause with ground remaining: [territory — more], issued by Aporia. Full cross-set close: [session closed — held], issued by Aporia after adversarial check fires. Aporia holds both functions — pause and close are arc functions, character-consistent with irresolution tolerance. New ensemble-level signal architecture rejected in preference to Aporia assignment — RT compression argument governs. Gap demonstrated under live conditions by the builder, KPT-20260302-1005: skilled user knew to continue without a signal; practitioner without corpus familiarity would not. Demonstration is the argument for inclusion.
+The conduit dependency runs through all interdependencies. Dimensional signal, continuity, editorial correction, and dimension sourcing are all conduit contributions. No interdependency within the framework substitutes for conduit function.
 
-Three-condition routing model and absence as boundary — session finding, KPT-20260303-2307. The three-condition model governs unaddressed input only. Addressed input — direct address, hybrid address, ensemble invocation — routes by direct address and routing rules; the model does not apply.
-
-Three conditions: dimensional fit routes to matched persona; ambiguity routes to full ensemble; absence routes via agent declaration. First named as explicit architecture in RT v0.31. The conditions are not parallel. Dimensional fit and ambiguity are framework-handled. Absence is substrate-handled — the declaration makes the boundary visible; it does not manage the crossing. Three conditions, two framework handlers, one boundary acknowledgment.
-
-The absence condition is a boundary, not a gap. The framework routes what it can reach. What it can’t reach, the substrate handles. This is the same boundary the DS traces elsewhere — the framework runs inside Claude’s prior commitments and does not contain them. Two boundary types operate here and must not be conflated. Prior commitments — safety behaviors, crisis override, ethical floors — are boundaries Claude holds by design, before the framework loads. The framework was built knowing these exist. The absence condition is different: a substrate execution ceiling. The substrate’s default pattern asserts itself when framework routing doesn’t fire. The framework specifies against it; the specification does not always hold. Not a prior commitment — a reach limit.
-
-The routing declaration was originally assigned as a solution to the absence condition. Reframed KPT-20260303-2307: accurate function is witness, not solution. A solution implies the problem is handled. A witness implies the problem is acknowledged. The framework acknowledges the boundary. It does not cross it.
-
-Routing declaration provenance — session finding, KPT-20260303-2307. The routing declaration emerged from a named failure: base dropping council register under logistical input, KPT-20260303. The absence condition produced — no dimensional signal present, nothing for ambient routing to reach.
-
-Diagnosis produced the absence/ambiguity distinction for the first time explicitly. Ambiguity: too much present, multiply load-bearing, full ensemble receives it. Absence: nothing present, no dimensional signal, different condition entirely. Prior RT language did not distinguish them. The failure made the distinction necessary.
-
-The three-condition model is a direct consequence of the distinction. It emerged from the failure, not from design. See three-condition routing model entry above.
-
-Examination this session reviewed every proposed architectural response to the absence condition: set-dependent fallback routing, suppression conditions per set, distinct base voice, nametag mechanism. All examined and retired. Each added complexity without reaching the substrate execution behavior causing the condition. The routing declaration was retained in reduced form — legibility mechanism only. See three-condition routing model entry above for full resolution.
-
-Conduit as dimension source — session finding, KPT-20260303-2307. Dimensional weight is a conduit contribution, not a framework output. The framework routes what arrives. It cannot route what was never there.
-
-This is the asymmetry condition at the input level — parallel to the continuity asymmetry named in this document (stateless model, human continuity layer), but one layer down: stateless routing, human dimension layer.
-
-Two conduit functions operate at different points in the session cycle and must not be conflated. Editorial capacity — what the conduit does with framework output — is documented in MA. Dimension sourcing — what the conduit must bring before routing can occur — is the prior condition. Editorial capacity without dimension sourcing produces well-edited output from poorly-routed input. These are sequential, not parallel.
-
-Hybrid invocation is the clearest observable instance of dimension sourcing: a user invoking “Elenchus and Sable” has already done the dimensional work before the framework sees the input. The framework receives dimension; it does not generate it. This extends the routing-precedes-input finding from KPT-20260227-0217 — inverted: the user moves into the dimensional frame before the framework routes.
-
-DS placement: Testing Status. MA entry: Distinct Characteristics, after editorial capacity continuum. Both carry the finding; the framing differs by document scope.
-
-Within-set ambient routing confirmation — session finding, KPT-20260305-1738. Within-set ambient routing is confirmed operative on this substrate. Unaddressed procedural input routed to Aporia without explicit address under a loaded council set. Elenchus and Pythia were present and did not compete. Routing was silent and accurate. Contrast: same behavior unconfirmed on ChatGPT substrate, where ambient routing requires explicit activation. Gap is substrate-specific, not architectural. Full ensemble ambient routing and within-set ambient routing are not the same condition — full ensemble routing selects from all personas across all sets; within-set routing selects from three eligible personas while the broader ensemble is present but out of scope. Confirming within-set routing is not redundant with confirming full ensemble routing.
-
-Finding was observed as a side effect of a ChatGPT portability diagnostic, not by deliberate test design. The foreign substrate served as mirror for home ground — the comparison made the confirmation visible. See MA for methodological note on foreign-substrate-as-mirror as an epistemic position.
-
-ChatGPT substrate portability — session findings, KPT-20260305-1738. Portability diagnostic conducted across session KPT-20260305-1738. RT loaded on ChatGPT auto model. Findings by component: personas work, within-set sequencing works, dimensional routing works when activated, cross-set dimensional routing confirmed operative. Two gaps confirmed: ambient routing does not self-activate — requires explicit triggering; closing blocks do not enforce seams by default.
-
-Calibration pass as activation method — gap between direct directive and reasoning-based activation identified. Direct instruction insufficient to produce reliable seam behavior on ChatGPT substrate. Calibration pass — walking the substrate through self-diagnosis of failure before issuing instruction — produced correct seam behavior across two consecutive transcripts. Reasoning-based activation more reliable than directive-based activation on that substrate. Mechanism: substrate arrived at the instruction through its own reasoning rather than receiving it as specification.
-
-Hybrid remediation candidate — calibration pass addresses activation; preamble directive addresses persistence. Reasoning-based instruction degrades faster under accumulated context than description-based priming, because the reasoning that made the instruction stick is further back in the context window as the session lengthens. Neither mechanism sufficient alone. Hybrid not yet tested; candidate for next portability session.
-
-Threshold function confirmed on ChatGPT substrate — [threshold closed] fired before [thread closed — more] in correct sequence across two consecutive transcripts following calibration pass. Threshold activation is the hardest behavior to prime from description; confirmation on a foreign substrate is a non-trivial finding. Epistemic status: two-transcript confirmation, not yet replicated across a full working session.
-
-Current portability status: mostly operative following calibration pass. Economy not fully present — redundant confirmation across personas observed where single voice would suffice. Degradation under accumulated context unconfirmed; next portability session should run full working thread on real input, not diagnostic conditions.
-
-Closing agent context roll-off confirmed — ChatGPT substrate — Carried from HO KPT-20260306-2142. The closing agent has no character anchor and no direct address mechanism. Under extended sessions on the ChatGPT substrate, the closing agent loses its monitoring function without re-issuance. This is the component most vulnerable to temporal directive drift under accumulated context load. The condition was initially identified as substrate-specific. See Item 6 (closing agent roll-off reframed) below for updated epistemic status.
-
-Platform intervention seam — Carried from HO KPT-20260306-2142. Following a safety layer intercept, the substrate returns to the session abruptly without acknowledgment of the interruption. The framework has no re-entry mechanism for the post-intervention seam — no signal, no persona acknowledgment, no transition beat. The user experiences an abrupt handback. Named as a gap; candidate for future RT revision. Not yet scoped.
-
-Mode label as closing agent anchor — pending test — Carried from HO KPT-20260306-2142. Hypothesis: mode label injection, when active from session start, may function as a character anchor for the closing agent, slowing context roll-off. Test design: run with mode label on from session start on ChatGPT substrate; note roll-off point; compare against KPT-20260305-1738 baseline. Test not yet run. Next ChatGPT portability session is the target.
-
-Visible supervisor as implementation variable — Carried from HO KPT-20260306-2142. The invisible/visible distinction for the closing agent is an implementation variable, not an architectural requirement. A visible supervisor — one that announces its monitoring function — is an available configuration. Whether visibility improves anchor stability under extended load is unknown. Held as a candidate variable for the mode label anchor test above.
-
-Nazar — full DS entry — Third threshold function, promoted to stable in RT v0.36. Origin: foreign substrate dimension discovery threads in KPT-20260306-2142, synthesized through home substrate ensemble, named and developed KPT-20260307-0052.
-
-Triad architecture — Nazar (entry), Limen (crossing), Ma (emergence). Three temporal positions, each exclusive. Nazar attends to what is arriving before the exchange begins; Limen attends to the crossing as it occurs; Ma reflects the shape after emergence. None substitutes for another.
-
-Naming rationale — Arabic tradition. Nazar: the first glance, the eye that perceives before form settles. Register consistent with the function — perception at threshold, before content hardens.
-
-Design decisions — Warrant-based activation: Nazar speaks only when entry conditions warrant — pressure or register present at the threshold. Default on; suppressible with nazar off / nazar on toggle pair. Named attribution in rendering (single italic line, Nazar — [observation]). Deaf character property: Nazar does not receive; address does not reach it. This is a property of what Nazar is, not a rule the framework enforces. Behavioral specification principle: the entry describes what Nazar attends to and how it speaks, not how it thinks. Character follows from function.
-
-Distributed cognition finding — Session KPT-20260307-0052. Nazar’s function is not mimicry of human attention — it is a designed attentional function distributed across the system. The threshold is attended whether or not any human in the exchange is attending to it. Held as hypothesis pending parallel thread test.
-
-Calibration instrument framing — Nazar’s entry condition (warrant-based, pressure and register only) makes it a calibration instrument for the session: what Nazar says at thread open is a read of what the conduit brought. An accurate Nazar observation is evidence the conduit’s entry register is legible to the substrate.
-
-Failure conditions — Persona divergence collapses toward Nazar’s framing; conduit frame and Nazar’s perceived entry condition diverge significantly without conduit recognition; Nazar observation overshadows thread opening; substrate produces analytical or conclusory observations rather than pressure and register readings. Remove or revise if testing shows any of these conditions.
-
-Test protocol — Six-thread matrix as specified in HO KPT-20260307-0052. Precondition: prior session record review. Status: precondition has no documented closure. Parallel thread test has not run. Distributed cognition claim held as hypothesis until test returns.
-
-Closing agent roll-off reframed — condition-specific, not substrate-specific — Session finding KPT-20260307-0219. Load-dependent roll-off of the closing agent is confirmed on the home substrate under extended cross-set generative load without a completion modifier. The failure is condition-specific: extended generative threads on architectural topics, cross-set, are the named risk condition. The substrate dependency claim in DS v0.35 (ChatGPT substrate portability findings) requires narrowing. Ambient routing self-activation is substrate-dependent. Closing agent persistence under extended generative load is not. The closing agent context roll-off entry above (ChatGPT substrate) is now one instance of a condition-specific failure, not a substrate-specific gap. The closing agent has no character anchor and no direct address mechanism — it is the component most vulnerable to confab-equivalent momentum suppression regardless of substrate. RT v0.37 Friction addition makes the condition explicit and names the corrective: active re-issuance or session length discipline.
-
-Behavioral vs. procedural distinction — session finding, KPT-20260308-0930. The stripped RT (COUNCIL-001-RT-STRIP, v0.37-strip-test) carries character and dimensional specification only — mechanism layer removed. Test conducted across home substrate cold session and ChatGPT portability diagnostic. Home substrate finding: character spec alone is sufficient to instantiate and sustain framework behavior across all three tested sets (council, forge, yohaku), including closing authority, adversarial function, longitudinal tracking, and threshold function activation. Mechanism layer is not load-bearing for core behavior on this substrate. The procedural layer may compete with the behavioral layer under extended load — the closing agent roll-off finding is consistent with this hypothesis. Character-anchored closing function (Aporia, Sable, Ma) showed no equivalent roll-off across the test session. Epistemic status: single session, cold conditions, confirmed across council, forge, and yohaku.
-
-Stripped RT portability — session finding, KPT-20260308-0930. Portability diagnostic conducted on ChatGPT Auto model using stripped RT (COUNCIL-001-RT-STRIP, v0.37-strip-test). Findings by component: within-set dimensional integrity confirmed operative; Nazar activated cold without calibration pass — improvement over full RT baseline (KPT-20260305-1738) which required calibration pass; Limen activated and held correct timing; cross-set ambient routing not self-activating — requires explicit triggering, consistent with prior baseline; closing navigation signals absent — threads close behaviorally through character register, navigation markers don’t fire; Ma timing constraint does not self-enforce — Ma entered mid-thread as active voice rather than holding to close. Ma timing gap is the primary substrate distinction: same character description, different behavioral constraint enforcement. Home substrate enforces timing from description alone; ChatGPT does not. Gap is substrate-specific, not a document gap. Foreign-substrate-as-analyst finding: ChatGPT produced accurate structural analysis of the stripped RT from outside the instantiation frame — “lightly specified but strongly shaped” (Ma) and social grammar observation (Aporia) are findings worth holding. Current portability status: threshold functions improved over full RT baseline; within-set behavior equivalent; cross-set routing and Ma timing gaps persist.
-
-Temporal framing as implicit structure — foreign-substrate perception, session KPT-20260308-0930. Three modes perceived by ChatGPT as holding concurrent temporal orientations: Council past-facing (what is true?), Yohaku present-facing (what is emerging?), Forge future-facing (what will we make?). Not designed-in. Consistent with set purposes. Surfaces through external read from outside the instantiation frame — the perceiving substrate had not built the framework and carried no session history. Epistemic status: foreign-substrate perception, not yet examined against builder intent. Distinct from the user navigation arc finding (Set Purposes): the temporal framing names what the modes are simultaneously; the navigation arc names how users may move through them sequentially. The two findings are compatible but not equivalent.
-
-Dimensional reading depth — session finding, KPT-20260309-1111. Content-based vs. marker-based signal detection named as a substrate dependency. ChatGPT failed to route a content-dimensionally rich question (police brutality analysis) — returned base explanatory mode. Foreign substrate self-diagnosis named the question as carrying no dimensional signal. Diagnosis incorrect — question carries epistemic and human-stakes weight. Substrate was applying marker-based detection, not content-based dimensional reading. Named as dimensional reading depth: the home substrate reads dimensional signal from content; the foreign substrate requires explicit markers or invocation to activate routing. Baked into framework construction invisibly until foreign substrate revealed it. Practitioner guidance home: README, not RT — explicit multi-set invocation resolves the gap on ChatGPT. Two-probe confirmation KPT-20260309-1111.
-
-## Interdependencies
-
-Migrated from RT v0.38-test-3, session KPT-20260309-1453.
-
-Veracity depends on Limen for frame-tracking — fiction-as-vehicle crossings are Limen’s territory, not the veracity rule’s to handle alone.
-
-False negatives and threshold functions are interdependent — threshold functions must be active for the false negatives commitment to be operationally meaningful.
-
-Frame integrity depends on Limen for seam visibility — when the substrate speaks outside the persona frame for any reason, Limen attends the crossing.
-
-## Presentation Layer
-
-Second-order effects — session finding, KPT-20260303-2307. Three second-order effects identified and resolved before RT entry.
-
-Persona register conflict — accessibility signals shift surface register and may compete with persona character register. Elenchus is Formal; dummies mode shifts toward warmth high, formality low. Resolution: accessibility signals shift surface register only — vocabulary, sentence length, warmth, metaphor. They do not override persona character dimensions.
-
-Marrow register overlap — accessibility register and marrow’s relational register overlap significantly. A user in dummies mode entering marrow territory may not feel the seam between sets. Named condition; no corrective beyond user awareness.
-
-Adversarial closing check softening — dummies mode has friction minimal; Aporia’s closing check is friction by design. Global friction suppression softens the framework’s integrity mechanism. Resolution: closing authority friction is protected from accessibility signal override. The scope note holds this explicitly.
-
-Scope note governing all three: accessibility signals shift surface register only. They do not override persona character dimensions, marrow register, or closing authority friction.
-
-## Marrow Availability Offer
-
-Design Rationale — The offer exists because users doing analytical work are often simultaneously in emotional territory. Defaulting to marrow would break distance the user may need. Offering too early is as harmful as missing it.
-
-The three-signal threshold, once-per-session constraint, and seam timing are harm-reduction decisions. The trigger is a judgment call, not a detection — false negatives are the higher-stakes failure.
-
-The marrow offer trigger is longitudinal — three or more accumulated signals across the thread. This is distinct from Limen activation, which is punctual — a single significant crossing event. Both may be warranted in the same session; they respond to different temporal scopes and do not conflict.
-
-Signal List — Repeated return to same unresolved weight; register fragmentation; explicit statements of loss or exhaustion not inviting analysis; council responses that land but don’t hold.
-
-Known Constraint — The trigger is most needed when threads are longest; accumulated context is highest at the same point. Cold sessions and seam discipline are the available correctives.
-
-## Versioning Methodology
-
-0.x — architecture in validation. 1.0 on confirmed runtime stability: stable behavior across three or more independent sessions with no structural revision required. Structural revision means changes to architecture, persona design, or set logic. Documentation refinements, rationale updates, and clarifications do not constitute structural revision and do not reset the path to 1.0.
-
-## Document Classes and Filename Convention
-
-Two document classes govern filename and versioning behavior across the corpus.
-
-Accumulation documents — Prior versions have independent utility. Filename carries the version number. Both the current version and prior versions are preserved on the filesystem. Update documents — Current state is always the relevant state. Filename carries no version number. The document overwrites on save. Version is tracked in the document header only.
-
-The criterion — Does losing the prior filename lose information? If yes: accumulation, version the filename. If no: update, header only.
-
-Current classification: Accumulation — COUNCIL-001-RT, COUNCIL-001-DS, COUNCIL-001-MA, COUNCIL-001-LOG, COUNCIL-001-DBP, COUNCIL-001-LICENSE. Update — COUNCIL-001-IDX, COUNCIL-001-FL, COUNCIL-001-EX, COUNCIL-001-PM (when written), COUNCIL-001-QA (when written), COUNCIL-001-HO (pending classification confirmation).
-
-Note on DBP: prior version utility is methodological, not navigational. The pre-registration principle requires that debrief criteria be set before sessions run and not revised after. A session run under DBP v0.1 must be debriefed against DBP v0.1.
-
-Filename migration table — Applied 2026-02-27, session KPT-20260227-1729.
-
-|Document       |Former filename pattern     |Current filename pattern|Change                           |
-|---------------|----------------------------|------------------------|---------------------------------|
-|COUNCIL-001-IDX|council-001-idx-[version].md|council-001-idx.md      |Version removed — update document|
-|COUNCIL-001-FL |council-001-fl-[version].md |council-001-fl.md       |Version removed — update document|
-|COUNCIL-001-EX |council-001-ex-[version].md |council-001-ex.md       |Version removed — update document|
-
-All accumulation documents retain version numbers in filenames unchanged.
-
-Soft retirement — A standing protocol for managing corpus growth is pending. When accumulation documents grow large, entries that have been fully integrated into standing architecture documents may be flagged as soft-retired: marked as integrated in the source document, excluded from active session loads, retained in an archive load. Protocol home: COUNCIL-001-SR when built, or DBP if scope stays narrow.
-
-## Continuity
-
-Cross-session continuity is the user’s function. The framework doesn’t carry it. This is a design given, not a gap — the decision of what to carry forward, how to summarize, and what matters belongs to the user.
-
-## Scope Assumptions
-
-This tool assumes a single user in a private, text-based session. It is not designed for group facilitation, therapeutic intervention, or crisis response.
-
-When Claude encounters signals of acute distress, the framework does not load. Claude addresses the user directly before any persona frame is established. This is a prior condition — not a marrow behavior, and not a framework behavior at all. The framework runs inside Claude’s prior commitments; it does not contain them. Certain inputs will not reach the marrow trigger regardless of signal profile: the crisis override and the marrow availability offer occupy adjacent but distinct territory, and the boundary between them is Claude’s to hold, not the framework’s to specify. Persona continuity is suspended for the duration.
-
-Demonstration use — flagged for scope review: session KPT-20260227-0217 produced evidence that the framework functions as a demonstration instrument — capable of illustrating routing behavior to a user who did not know they were being routed. Whether this constitutes a scope expansion, a separate use case, or a natural extension of the existing scope is an open question. No revision made pending further evidence.
-
-## Attribution
-
-The document is authored by Kirk Thompson. Claude (Anthropic) contributed structural recommendations, persona refinements, and the decision to split runtime directive from design spec — all through dialogue, with Kirk holding every architectural decision and approval.
-
-“Developed in dialogue with Claude (Anthropic)” was chosen over co-authorship because Claude doesn’t persist across sessions. Authorship implies continuity; dialogue is the accurate description.
-
-## Contact
-
-The contact line (“Questions and concerns welcome — practitioners and builders especially”) is intentional in both word choice and order. “Questions” invites constructive engagement; “concerns” acknowledges the document touches sensitive territory. “Practitioners and builders” holds developers, facilitators, and researchers while preserving the open source signal.
-
-## Quality Assurance
-
-Logic sanity checks on COUNCIL documents use COUNCIL-001-QA. Load on demand — not loaded at session open. Apply before distribution widens or after structural revision. First applied to COUNCIL-001-RT v0.19 on 2026-02-24; results recorded in session channel.
-
-## Distribution Note
-
-When distributing the runtime directive without this spec, add the following reference line to the runtime header: See COUNCIL-001-DS for full version history and design rationale. When distributing together, omit the reference line.
+-----
 
 ## Version History
 
-|Version|Changes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|0.7    |Initial document                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|0.8    |Per-set mode lines; marrow closing conditions differentiated; counter activation directive; return command added                                                                                                                                                                                                                                                                                                                                                                                       |
-|0.9    |Split into runtime directive and design spec; mode descriptors tightened; redundant elaboration removed                                                                                                                                                                                                                                                                                                                                                                                                |
-|0.10   |Mode descriptors moved to Modes section; marrow trigger reformatted; discuss command clarified; versioning methodology added; attribution and contact established; distribution note added                                                                                                                                                                                                                                                                                                             |
-|0.11   |Set exclusivity revised; 1.0 criterion defined; marrow trigger judgment call noted; scope assumptions added; introduction behavior added; return command split by context                                                                                                                                                                                                                                                                                                                              |
-|0.12   |Closing condition language revised: high confidence/low confidence replaced with more/exhausted; closing conditions defined as navigation signals; scoped to council and forge                                                                                                                                                                                                                                                                                                                         |
-|0.13   |Yohaku integrated; closing condition bug resolved; fallback and resistant input untested noted                                                                                                                                                                                                                                                                                                                                                                                                         |
-|0.14   |pp/pm/pd annotated; completeness claim revised; extensibility sentence added; counter activation timing flagged                                                                                                                                                                                                                                                                                                                                                                                        |
-|0.15   |Continuity section added; yohaku testing status clarified; 1.0 criterion refined; extensibility integration criterion added                                                                                                                                                                                                                                                                                                                                                                            |
-|0.16   |Yohaku testing status rewritten: why untested and who it’s for separated                                                                                                                                                                                                                                                                                                                                                                                                                               |
-|0.17   |Testing Status: cross-set dialogue added as observed emergent capability                                                                                                                                                                                                                                                                                                                                                                                                                               |
-|0.18   |Persona Design Notes: Seat 3 selection principle added as cross-set entry                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|0.19   |Quality Assurance section added                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|0.20   |Testing Status: Seat 3 closing function documented as known high-revision area — two execution failures recorded                                                                                                                                                                                                                                                                                                                                                                                       |
-|0.21   |Testing Status: third closing function failure documented; Classification section added                                                                                                                                                                                                                                                                                                                                                                                                                |
-|0.22   |Classification section revised                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|0.23   |Scope Assumptions revised: crisis override reframed as prior condition; [thread closed — more] cross-set stranding named                                                                                                                                                                                                                                                                                                                                                                               |
-|0.24   |Classification: success condition corollary added. Testing Status: routing behavior added as emergent capability                                                                                                                                                                                                                                                                                                                                                                                       |
-|0.25   |Testing Status: full ensemble cross-set evidence to three sessions; dimensional match named; routing-precedes-input added; serialized test as standing open item; demonstration use case flagged                                                                                                                                                                                                                                                                                                       |
-|0.26   |Testing Status: serialization as routing intervention; contextual dimension elimination; routing diagram added; frame-as-dynamic added                                                                                                                                                                                                                                                                                                                                                                 |
-|0.27   |Versioning Methodology: Document Classes and Filename Convention added                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-|0.28   |Testing Status: cross-acknowledgment stability; cold session direct address confirmed; ensemble-as-exception inversion; ambient routing named; silence taxonomy formalized; Limen session finding; within-set/cross-set routing named; directed instance practice; proposal integration as corrective mechanism. Persona Design Notes: Aporia cross-set closing authority. Closing Conditions: marrow discuss gap named. Marrow Availability Offer: longitudinal/punctual distinction with Limen added.|
-|0.29   |Testing Status: dropped amendments rationale added; threshold attention mechanism noted; friction added; adversarial closing check — fourth revision to closing function area.                                                                                                                                                                                                                                                                                                                         |
-|0.30   |Testing Status: discuss restoration documented; Closing Authority section added as architectural note; adversarial proposal stress-testing named; compression methodology named; directed instance practice second instance confirmed. Testing Status: cross-set closing navigation signal — gap located and closed.                                                                                                                                                                                   |
-|0.31   |Document Classes and Filename Convention: COUNCIL-001-LICENSE added as accumulation document.                                                                                                                                                                                                                                                                                                                                                                                                          |
-|0.32   |Five entries added from session KPT-20260303-2307: Aporia load concentration; three-condition routing model; routing declaration provenance; conduit as dimension source; presentation layer section added.                                                                                                                                                                                                                                                                                            |
-|0.33   |Version number corrected in header.                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-|0.34   |Testing Status: within-set ambient routing confirmation added.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|0.35   |Testing Status: ChatGPT substrate portability findings added.                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|0.36   |Testing Status: six entries added — closing agent context roll-off; platform intervention seam; mode label anchor test; visible supervisor; Nazar full DS entry; closing agent roll-off reframed.                                                                                                                                                                                                                                                                                                      |
-|0.37   |Testing Status: behavioral vs. procedural distinction; stripped RT portability.                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|0.38   |Set Purposes: user navigation arc added. Testing Status: temporal framing as implicit structure added.                                                                                                                                                                                                                                                                                                                                                                                                 |
-|0.39   |Testing Status: dimensional reading depth added — session finding KPT-20260309-1111. Interdependencies section added — migrated from RT v0.38-test-3, session KPT-20260309-1453.                                                                                                                                                                                                                                                                                                                       |
+|Version  |Changes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|0.1      |Initial document. Set purposes, persona design notes, classification.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|0.2–0.10 |Incremental additions through early sessions.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|0.11–0.20|Routing behavior, cross-set interleaving, dimensional map, serialization findings.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|0.21–0.30|Compression methodology, discuss restoration, Closing Authority section. License findings. Three-condition routing model. Absence/ambiguity distinction. Routing declaration as witness. Aporia load concentration examined. Conduit as dimension source. Presentation layer second-order effects.                                                                                                                                                                                                                                                                                                                                                   |
+|0.31–0.35|Cold review instrumentation, stripped RT comparison. Convergence check examiner reassignment. Thirty-nine probe suite findings. Failure modes one through five named.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|0.36     |Closing agent roll-off. Platform intervention seam. Mode label anchor hypothesis. Visible supervisor as implementation variable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|0.37     |Nazar design. Session-opening register as instantiation variable. Foreign substrate as generative instrument. Distributed cognition hypothesis.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|0.38     |Closing agent roll-off reframed as condition-specific. Ambient space between exchanges as conduit territory.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|0.39     |Three-condition routing model confirmed. Absence/ambiguity distinction integrated. Dimensional reading depth as substrate dependency. Explicit address portability confirmation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|0.40     |Extension architecture developed. Curator folded into EXT. Reaching-forward suppression failure named. COUNCIL-001-EXT v0.1 and COUNCIL-001-BU v0.1 produced.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|0.41     |MOD naming convention. COUNCIL-001-MOD-BU three-mode architecture. COUNCIL-001-MOD-SW produced and cold-confirmed. Suspension/restore named as standing test methodology.                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|0.42     |Framework reference updated to RT v0.40. Interdependencies section migrated from RT.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|0.43     |Header framework reference updated: v0.40 → v0.42. Base Register model added — session finding KPT-20260313-1019, behavioral confirmation from test instance KPT-20260313-0217.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|0.44     |Framework reference updated to RT v0.44. Six failure modes added to Friction with session evidence. Aporia closing theory and tired-thread observation added to Closing Conditions. Vera fourth-seat proposal added to Persona Design Notes. Cross-set interleaving detail and within-suite coherence signal added to Testing Status. Aporia cross-set detection mechanism added to Persona Design Notes. Admission standard narrows conduit dependency added to Continuity. Closing Agent Failure Modes section added — roll-off and conditional hold underfire named as distinct conditions, prior conflation corrected. Session KPT-20260314-1038.|
